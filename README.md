@@ -299,18 +299,26 @@ This data science project presents a supervised learning pipeline for predicting
       plt.savefig(filename, dpi=300, bbox_inches='tight')
       plt.show()
   ```
+  The created plots are saved as individual PNG image files under the created folder called 'plots' <br />
+  ![image](https://github.com/user-attachments/assets/e43b4639-0573-4ae5-b430-b44d72c59f4b) <br />
   
-
-
   
 - The visualisation output is seen below <br />
   ![image](https://github.com/user-attachments/assets/d1fe67fd-18c9-46c7-bd22-8a5c7973d954) <br />
   ![image](https://github.com/user-attachments/assets/c980ed67-7751-4661-ab0c-54c1d29df24b) <br />
   ![image](https://github.com/user-attachments/assets/ec5ef8f1-4f17-4264-8076-57b40ed11699) <br />
 
+- Based on the F1 Score, which balances precision and recall, the models performed as follows:
+  - Logistic Regression: Achieved the highest F1 score (0.609195), indicating a good balance between precision and recall. It also has the highest ROC-AUC (0.841585), suggesting strong discriminative ability
+  - SVM: Has a lower F1 score (0.556231) compared to Logistic Regression, and a lower ROC-AUC (0.796047)
+  - Random Forest: Also has a lower F1 score (0.550075) and ROC-AUC (0.825081) than Logistic Regression
 
-- The created plots will be saved as individual image files under the created folder called 'plots' <br />
-  ![image](https://github.com/user-attachments/assets/e43b4639-0573-4ae5-b430-b44d72c59f4b) <br />
+- The interpretations of the visualised plots are as follows:
+  - Logistic Regression: Shows a good balance with a relatively high number of correctly predicted churn cases (212) while maintaining a reasonable number of false positives (110)
+  - Random Forest: Has a slightly lower number of correctly identified churn cases (184) and a higher number of false negatives (190) compared to Logistic Regression
+  - SVM: Similar to Random Forest, SVM also has a lower number of correctly identified churn cases (183) and a higher number of false negatives (191) than Logistic Regression
+
+- As a conclusion, Logistic Regression appears to be the best-performing model based on these metrics, offering a better balance between precision and recall, and a higher ability to discriminate between churn and no-churn cases
 
 
 
