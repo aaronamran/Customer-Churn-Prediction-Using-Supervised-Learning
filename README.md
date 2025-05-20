@@ -17,7 +17,7 @@ Jupyter Notebook is used for this project, and the final code will be compiled i
   In Jupyter Notebook, it looks like this <br />
   ![image](https://github.com/user-attachments/assets/95606ca6-f961-48d9-8c0a-98c69171653b) <br />
 
-- Complete Python code
+- The complete Python code used is below
   ```
   # Customer Churn Prediction Using Supervised Learning
   
@@ -138,8 +138,14 @@ Jupyter Notebook is used for this project, and the final code will be compiled i
       plt.savefig(filename, dpi=300, bbox_inches='tight')
       plt.show()
   ```
+- The visualisation output is seen below <br />
+  ![image](https://github.com/user-attachments/assets/d1fe67fd-18c9-46c7-bd22-8a5c7973d954) <br />
+  ![image](https://github.com/user-attachments/assets/c980ed67-7751-4661-ab0c-54c1d29df24b) <br />
+  ![image](https://github.com/user-attachments/assets/ec5ef8f1-4f17-4264-8076-57b40ed11699) <br />
+
 
 - The created plots will be saved as individual image files under the created folder called 'plots' <br />
   ![image](https://github.com/user-attachments/assets/e43b4639-0573-4ae5-b430-b44d72c59f4b) <br />
+
 
 
