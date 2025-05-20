@@ -14,7 +14,7 @@
 
 ## Data Collection and Preparation
 
-- In this Kaggle website: , download the Telco Customer Churn dataset as a ZIP file. The dataset will be  <br />
+- In this Kaggle website called [Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn/data), download the Telco Customer Churn dataset as a ZIP file. The dataset will be  <br />
   ![image](https://github.com/user-attachments/assets/3ccb8762-89a8-41dc-bed3-2a56b534aadc) <br />
   ![image](https://github.com/user-attachments/assets/b4d1d85d-5040-4ffb-acd2-f05a9c65d53b) <br />
 
