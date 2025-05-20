@@ -243,7 +243,7 @@ Jupyter Notebook is used for this project, and the final code will be compiled i
   - Recall (percentage of actual churns correctly predicted)
   - F1 Score (Harmonic mean of precision and recall which is useful whena balance between false positives and false negatives is required). The formula is: <br />
     F1 Score = 2 * ((Precision * Recall)/(Precision + Recall))
-  - ROC-AUC (Receiver Operating Characteristic - Area Under Curve) (Ability toseparate classes across all threshold values; a higher AUC means the model is better at distinguishing between churn and non-churn customers). A perfect classifier is AUC of 1.0, but AUC of 0.5 means it is no better than random guessing
+  - ROC-AUC (Receiver Operating Characteristic - Area Under Curve) (Ability to separate classes across all threshold values; a higher AUC means the model is better at distinguishing between churn and non-churn customers). A perfect classifier is AUC of 1.0, but AUC of 0.5 means it is no better than random guessing
   ```
   # 12. Evaluation function
   def evaluate_model(name, model, X_test, y_test):
