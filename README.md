@@ -173,6 +173,7 @@ Jupyter Notebook is used for this project, and the final code will be compiled i
   import numpy as np
   import matplotlib.pyplot as plt
   import seaborn as sns
+  import os
   
   from sklearn.model_selection import train_test_split
   from sklearn.preprocessing import StandardScaler
@@ -264,7 +265,10 @@ Jupyter Notebook is used for this project, and the final code will be compiled i
   print("\nModel Evaluation Results:")
   print(results_df)
   
-  # 14. Confusion Matrices
+  # 14. Confusion Matrices and Save Plots
+  # Create a directory to store plots if it doesn't exist
+  os.makedirs("plots", exist_ok=True)
+  
   for name, model in trained_models.items():
       if name in ["Logistic Regression", "SVM"]:
           y_pred = model.predict(X_test_scaled)
@@ -273,9 +277,14 @@ Jupyter Notebook is used for this project, and the final code will be compiled i
   
       cm = confusion_matrix(y_test, y_pred)
       disp = ConfusionMatrixDisplay(confusion_matrix=cm)
-      disp.plot()
+      disp.plot(cmap='Blues')
       plt.title(f'Confusion Matrix: {name}')
+  
+      # Save the figure before showing it
+      filename = f"plots/confusion_matrix_{name.replace(' ', '_')}.png"
+      plt.savefig(filename, dpi=300, bbox_inches='tight')
       plt.show()
   ```
 
+  
 
