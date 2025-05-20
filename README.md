@@ -167,32 +167,3 @@ Jupyter Notebook is used for this project, and the final code will be compiled i
 
 
 
-
-
-
-
-
-
-
-
-
-- Try a range of classifiers:
-
-Logistic Regression
-
-Decision Tree / Random Forest
-
-k-Nearest Neighbors
-
-Gradient Boosting (e.g. XGBoost, LightGBM)
-
-evaluation:
-- Use metrics that capture both recall and precision:
-
-Confusion matrix
-
-Precision, Recall, F1-score
-
-ROC AUC
-
-PR AUC (especially important if classes are imbalanced)
