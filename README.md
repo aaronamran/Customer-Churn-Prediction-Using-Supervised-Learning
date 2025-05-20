@@ -7,9 +7,8 @@ Jupyter Notebook is used for this project, and the final code will be compiled i
 ![customer_churn_prediction_supervised_learning](https://github.com/user-attachments/assets/7921b612-67b4-46a8-bc87-99ce90b4024f)
 
 1. [Exploratory Data Analysis and Data Preprocessing](#exploratory-data-analysis-and-data-preprocessing)
-2. [Feature Engineering](#feature-engineering)
-3. [Model Selection, Training and Evaluation](#model-selection-training-and-evaluation)
-4. []()
+2. [Model Selection, Training and Evaluation](#model-selection-training-and-evaluation)
+
 
 
 ## Exploratory Data Analysis and Data Preprocessing
@@ -51,12 +50,40 @@ Jupyter Notebook is used for this project, and the final code will be compiled i
 
   - Categorical (need encoding): gender, Partner, Dependents, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod
  
-- 
+- Encode the target column
+  ```
+  df['Churn'] = df['Churn'].map({'Yes': 1, 'No': 0})
+  ```
+ 
+- Encode the categorical features. For simplicity, use one-hot encoding to turn categorical columns into binary ones like Contract_Month-to-month, gender_Male, etc.
+  ```
+  df = pd.get_dummies(df, drop_first=True)
+  ```
+
+- Feature Scaling (for distance-based models)
 
 
-  
-## Data Preprocessing and Feature Engineering
 
 
 
 ## Model Selection, Training and Evaluation
+- Try a range of classifiers:
+
+Logistic Regression
+
+Decision Tree / Random Forest
+
+k-Nearest Neighbors
+
+Gradient Boosting (e.g. XGBoost, LightGBM)
+
+evaluation:
+- Use metrics that capture both recall and precision:
+
+Confusion matrix
+
+Precision, Recall, F1-score
+
+ROC AUC
+
+PR AUC (especially important if classes are imbalanced)
