@@ -17,7 +17,7 @@ Jupyter Notebook is used for this project, and the final code will be compiled i
   In Jupyter Notebook, it looks like this <br />
   ![image](https://github.com/user-attachments/assets/95606ca6-f961-48d9-8c0a-98c69171653b) <br />
 
-- The complete Python code used is below
+- The complete Python code used is below. Alternatively, the Python code file can be obtained from [here](https://github.com/aaronamran/Customer-Churn-Prediction-Using-Supervised-Learning/blob/main/customer-churn-prediction-supervised-learning.py)
   ```
   # Customer Churn Prediction Using Supervised Learning
   
