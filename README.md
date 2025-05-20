@@ -11,7 +11,7 @@ Jupyter Notebook is used for this project, and the final code will be compiled i
   ![image](https://github.com/user-attachments/assets/3ccb8762-89a8-41dc-bed3-2a56b534aadc) <br />
   ![image](https://github.com/user-attachments/assets/b4d1d85d-5040-4ffb-acd2-f05a9c65d53b) <br />
 
-- Extract the ZIP file. It will only contain 1 CSV file as shown <br />
+- Extract the ZIP file. It contains only 1 CSV file as shown <br />
   ![image](https://github.com/user-attachments/assets/2813a7fd-9e27-4b0d-a23a-3698a8331e2a) <br />
 
   In Jupyter Notebook, it looks like this <br />
@@ -138,6 +138,44 @@ Jupyter Notebook is used for this project, and the final code will be compiled i
       plt.savefig(filename, dpi=300, bbox_inches='tight')
       plt.show()
   ```
+
+- In the '1. Import Libraries' section, all the necessary libraries are imported. `pandas` and `numpy` are used for data manipulation and numerical computations, `matplotlib` and `seaborn` are used for visualisations, and `os` is used for handling file paths and directories. The `sklearn` modules are for model training, data preprocessing and performance metrics
+  ```
+  import pandas as pd
+  import numpy as np
+  import matplotlib.pyplot as plt
+  import seaborn as sns
+  import os
+  
+  from sklearn.model_selection import train_test_split
+  from sklearn.preprocessing import StandardScaler
+  from sklearn.linear_model import LogisticRegression
+  from sklearn.ensemble import RandomForestClassifier
+  from sklearn.svm import SVC
+  
+  from sklearn.metrics import (
+      accuracy_score,
+      precision_score,
+      recall_score,
+      f1_score,
+      roc_auc_score,
+      confusion_matrix,
+      ConfusionMatrixDisplay
+  )
+  ```
+- Sections 2 and 3 are for loading the dataset and dropping irrelevant columns. The `customerID` column is removed since it is not useful for modeling as it is just an identifier and does not influence the churn behaviour
+  ```
+  # 2. Load Dataset
+  df = pd.read_csv('./Telco-Customer-Churn-Dataset.csv')
+  
+  # 3. Drop irrelevant columns
+  df.drop('customerID', axis=1, inplace=True)
+  ```
+
+- 
+
+
+  
 - The visualisation output is seen below <br />
   ![image](https://github.com/user-attachments/assets/d1fe67fd-18c9-46c7-bd22-8a5c7973d954) <br />
   ![image](https://github.com/user-attachments/assets/c980ed67-7751-4661-ab0c-54c1d29df24b) <br />
