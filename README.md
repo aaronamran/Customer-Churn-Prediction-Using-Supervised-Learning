@@ -139,7 +139,7 @@ Jupyter Notebook is used for this project, and the final code will be compiled i
       plt.show()
   ```
 
-- In the '1. Import Libraries' section, all the necessary libraries are imported. `pandas` and `numpy` are used for data manipulation and numerical computations, `matplotlib` and `seaborn` are used for visualisations, and `os` is used for handling file paths and directories. The `sklearn` modules are for model training, data preprocessing and performance metrics
+- In the first section, all the necessary libraries are imported. `pandas` and `numpy` are used for data manipulation and numerical computations, `matplotlib` and `seaborn` are used for visualisations, and `os` is used for handling file paths and directories. The `sklearn` modules are for model training, data preprocessing and performance metrics
   ```
   import pandas as pd
   import numpy as np
@@ -185,7 +185,7 @@ Jupyter Notebook is used for this project, and the final code will be compiled i
   df['TotalCharges'] = df['TotalCharges'].fillna(df['TotalCharges'].median())
   ```
 
-- To avoid multicollinearity (dummy variable trap), section 6 code converts categorical variables into numeric binary variables (dummy variables), excluding one category per feature (`drop_first=True`)
+- To avoid multicollinearity (dummy variable trap), section 6 code converts categorical variables into numeric binary variables (dummy variables), excluding one category per feature (`drop_first=True`). Multicollinearity occurs when two or more independent variables in a dataset are highly correlated, making it difficult for a model to determine the individual effect of each variable on the target
   ```
   # 6. One-hot encode categorical variables (drop_first to avoid dummy trap)
   df = pd.get_dummies(df, drop_first=True)
@@ -198,7 +198,7 @@ Jupyter Notebook is used for this project, and the final code will be compiled i
   y = df['Churn']
   ```
 
-- The code for section 8 splits the dataset into training (80%) and testing (20%) sets while preserving the class distribution of `Churn` using `stratify=y`
+- The code for section 8 splits the dataset into training (80%) and testing (20%) sets while preserving the class distribution of `Churn` using `stratify=y`. The 80-20 rule is a common practice to allocate 80% of data for training the model and 20% for testing to ensure there's enough data to both learn the patterns and objectively evaluate performance on unseen data to balancing bias and variance. While 80-20 is common, the split ratio isn't fixed; it can be adjusted based on dataset size (e.g., 70-30, 90-10, etc.)
   ```
   # 8. Train-test split
   X_train, X_test, y_train, y_test = train_test_split(
@@ -237,7 +237,13 @@ Jupyter Notebook is used for this project, and the final code will be compiled i
       trained_models[name] = model
   ```
 
-- The evaluation function in section 12 is to evaluate a model using several classification metrics, which are Accuracy (Overall correctness), Precision: (percentage of predicted churns that were actually churns), Recall (percentage of actual churns correctly predicted), F1 Score (Harmonic mean of precision and recall) and ROC-AUC (Ability to distinguish between churn and no churn)
+- The evaluation function in section 12 is to evaluate a model using several classification metrics, which are:
+  - Accuracy (Overall correctness)
+  - Precision (percentage of predicted churns that were actually churns)
+  - Recall (percentage of actual churns correctly predicted)
+  - F1 Score (Harmonic mean of precision and recall which is useful whena balance between false positives and false negatives is required). The formula is: <br />
+    F1 Score = 2 * ((Precision * Recall)/(Precision + Recall))
+  - ROC-AUC (Receiver Operating Characteristic - Area Under Curve) (Ability toseparate classes across all threshold values; a higher AUC means the model is better at distinguishing between churn and non-churn customers). A perfect classifier is AUC of 1.0, but AUC of 0.5 means it is no better than random guessing
   ```
   # 12. Evaluation function
   def evaluate_model(name, model, X_test, y_test):
