@@ -1,1 +1,1 @@
-# Customer-Churn-Prediction-Using-Supervised-Learning
+# Customer Churn Prediction Using Supervised Learning
