@@ -21,7 +21,10 @@
 - Extract the ZIP file. It will only contain 1 CSV file as shown <br />
   ![image](https://github.com/user-attachments/assets/2813a7fd-9e27-4b0d-a23a-3698a8331e2a) <br />
 
-- 
+  In Jupyter Notebook, it looks like this <br />
+  ![image](https://github.com/user-attachments/assets/68a1b407-5baf-425b-a348-8e5e1048e173) <br />
+
+-  
 
 
   
